@@ -47,4 +47,19 @@ defmodule NemoHelperWeb.Endpoint do
   plug Plug.Head
   plug Plug.Session, @session_options
   plug NemoHelperWeb.Router
+
+  # plug :introspect
+
+  # def introspect(conn, _opts) do
+  #   IO.puts """
+  #   Verb: #{inspect(conn.method)}
+  #   Host: #{inspect(conn.host)}
+  #   Headers: #{inspect(conn.req_headers)}}
+  #   """
+  #   conn
+  # end
+
+  # socket "/socket", NemoHelperWeb.UserSocket,
+  #   websocket: true,
+  #   longpoll: false
 end

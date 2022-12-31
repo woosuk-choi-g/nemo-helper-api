@@ -9,7 +9,7 @@ defmodule NemoHelper.Application do
   def start(_type, _args) do
     children = [
       # Start the Ecto repository
-      NemoHelper.Repo,
+      # NemoHelper.Repo,
       # Start the Telemetry supervisor
       NemoHelperWeb.Telemetry,
       # Start the PubSub system
