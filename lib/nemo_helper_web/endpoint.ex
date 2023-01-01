@@ -59,7 +59,7 @@ defmodule NemoHelperWeb.Endpoint do
   #   conn
   # end
 
-  # socket "/socket", NemoHelperWeb.UserSocket,
-  #   websocket: true,
-  #   longpoll: false
+  socket "/socket", NemoHelperWeb.UserSocket,
+    websocket: true,
+    longpoll: false
 end
