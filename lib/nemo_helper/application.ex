@@ -15,9 +15,9 @@ defmodule NemoHelper.Application do
       # Start the PubSub system
       {Phoenix.PubSub, name: NemoHelper.PubSub},
       # Start the Endpoint (http/https)
-      NemoHelperWeb.Endpoint
+      NemoHelperWeb.Endpoint,
       # Start a worker by calling: NemoHelper.Worker.start_link(arg)
-      # {NemoHelper.Worker, arg}
+      NemoHelper.RoomWatcher
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
