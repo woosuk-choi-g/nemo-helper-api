@@ -1,9 +1,9 @@
 defmodule NemoHelper.TimeUtil do
-  def now() do
-    :calendar.local_time() |> NaiveDateTime.from_erl!()
+  def kst_now() do
+    NaiveDateTime.utc_now() |> NaiveDateTime.add(9, :hour)
   end
 
   def iso_now() do
-    now() |> NaiveDateTime.to_string()
+    kst_now() |> NaiveDateTime.to_string()
   end
 end
